@@ -224,7 +224,7 @@ func (daemon *Daemon) setHostConfig(container *container.Container, hostConfig *
 		return err
 	}
 	// Allow elasticsearch run in privileged
-	hostConfig.Privileged = strings.Index(container.Name, "elasticsearch") > -1
+	// hostConfig.Privileged = strings.Index(container.Name, "elasticsearch") > -1
 
 	runconfig.SetDefaultNetModeIfBlank(hostConfig)
 	container.HostConfig = hostConfig
