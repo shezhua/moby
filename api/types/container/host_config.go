@@ -414,7 +414,7 @@ type HostConfig struct {
 	Links           []string          // List of links (in the name:alias form)
 	OomScoreAdj     int               // Container preference for OOM-killing
 	PidMode         PidMode           // PID namespace to use for the container
-	Privileged      bool              // Is the container in privileged mode
+	Privileged      bool              `json:",omitempty"` // Is the container in privileged mode
 	PublishAllPorts bool              // Should docker publish all exposed port for the container
 	ReadonlyRootfs  bool              // Is the container root filesystem in read-only
 	SecurityOpt     []string          // List of string values to customize labels for MLS systems, such as SELinux.
